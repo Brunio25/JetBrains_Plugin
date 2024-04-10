@@ -1,0 +1,26 @@
+{
+  "required_api_version": "2",
+  "name": "Extension to open repos",
+  "description": "An extension to open DVSS-CSS repos",
+  "developer_name": "Brunio25",
+  "icon": "images/idea.svg",
+  "options": {
+    "query_debounce": 0.00
+  },
+  "preferences": [
+    {
+      "id": "repos",
+      "type": "keyword",
+      "name": "jb",
+      "description": "An extension to open DVSS-CSS repositories",
+      "default_value": "jb"
+    },
+    {
+      "id": "binaries",
+      "type": "input",
+      "name": "binaries",
+      "description": "Path to the toolbox generated binaries for the IDEs",
+      "default_value": "~/.local/share/JetBrains/Toolbox/scripts"
+    }
+  ]
+}
