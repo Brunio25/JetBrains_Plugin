@@ -1,7 +1,6 @@
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from shutil import which
 from sys import platform
 from typing import Union
 from xml.etree import ElementTree
@@ -177,7 +176,7 @@ class KeywordQueryEventListener(EventListener):
             editor_project_pairs.extend([(editor, p) for p in projects])
 
         editor_project_pairs.sort(key=lambda pair: pair[1].last_opened, reverse=True)
-        editor_project_pairs = editor_project_pairs[:7]
+        editor_project_pairs = editor_project_pairs[:int(self.preferences['item_limit'])]
 
         return RenderResultListAction([
             ExtensionResultItem(
